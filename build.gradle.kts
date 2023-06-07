@@ -19,6 +19,16 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    val kotestVersion = "4.6.0"
+    //mockk
+    testImplementation("io.mockk:mockk:1.9.3")
+    //kotest
+    testImplementation ("io.kotest:kotest-runner-junit5:$kotestVersion")
+    testImplementation ("io.kotest:kotest-assertions-core:$kotestVersion")
+    testImplementation ("io.kotest:kotest-property:$kotestVersion")
+    //kotest-extension-spring
+    testImplementation("io.kotest:kotest-extensions-spring:4.4.3")
 }
 
 tasks.withType<KotlinCompile> {
